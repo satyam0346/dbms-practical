@@ -197,7 +197,7 @@ CREATE TABLE Deposit (
     Cname VARCHAR(50),
     Bname VARCHAR(50),
     Amount DECIMAL(10, 2),
-    Date VARCHAR(20)
+    "Date" VARCHAR(20)
 );
 
 INSERT INTO Deposit VALUES(100, 'ANIL', 'VRCE', 1000.00, '1-MAR-95');
