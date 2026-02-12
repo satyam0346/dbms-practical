@@ -96,7 +96,7 @@ CREATE TABLE Client (
     City VARCHAR(50),
     Pincode VARCHAR(10),
     State VARCHAR(50),
-    Baldue DECIMAL(10, 2)
+    Baldue DECIMAL
 );
 
 INSERT INTO Client VALUES('C00001', 'Ivan Bayross', 'Mumbai', '400054', 'Maharashtra', 15000);
@@ -176,20 +176,20 @@ CREATE TABLE Salesorder_Details (
     Rate DECIMAL(10, 2)
 );
 
-INSERT INTO Salesorder_Details VALUES('019001', 'P00001', 4, 4, 525);
-INSERT INTO Salesorder_Details VALUES('019001', 'P07965', 2, 1, 8400);
-INSERT INTO Salesorder_Details VALUES('019001', 'P07885', 2, 1, 5250);
-INSERT INTO Salesorder_Details VALUES('019002', 'P00001', 10, 0, 525);
-INSERT INTO Salesorder_Details VALUES('046865', 'P07868', 3, 3, 3150);
-INSERT INTO Salesorder_Details VALUES('046865', 'P07885', 3, 1, 5250);
-INSERT INTO Salesorder_Details VALUES('046865', 'P00001', 10, 10, 525);
-INSERT INTO Salesorder_Details VALUES('046865', 'P0345', 4, 4, 1050);
-INSERT INTO Salesorder_Details VALUES('019003', 'P0345', 2, 2, 1050);
-INSERT INTO Salesorder_Details VALUES('019003', 'P06734', 1, 1, 12000);
-INSERT INTO Salesorder_Details VALUES('046866', 'P07965', 1, 0, 8400);
-INSERT INTO Salesorder_Details VALUES('046866', 'P07975', 1, 0, 1050);
-INSERT INTO Salesorder_Details VALUES('019008', 'P00001', 10, 5, 525);
-INSERT INTO Salesorder_Details VALUES('019008', 'P07975', 5, 3, 1050);
+INSERT INTO Salesorder_Details VALUES('O19001', 'P00001', 4, 4, 525);
+INSERT INTO Salesorder_Details VALUES('O19001', 'P07965', 2, 1, 8400);
+INSERT INTO Salesorder_Details VALUES('O19001', 'P07885', 2, 1, 5250);
+INSERT INTO Salesorder_Details VALUES('O19002', 'P00001', 10, 0, 525);
+INSERT INTO Salesorder_Details VALUES('O46865', 'P07868', 3, 3, 3150);
+INSERT INTO Salesorder_Details VALUES('O46865', 'P07885', 3, 1, 5250);
+INSERT INTO Salesorder_Details VALUES('O46865', 'P00001', 10, 10, 525);
+INSERT INTO Salesorder_Details VALUES('O46865', 'P0345', 4, 4, 1050);
+INSERT INTO Salesorder_Details VALUES('O19003', 'P0345', 2, 2, 1050);
+INSERT INTO Salesorder_Details VALUES('O19003', 'P06734', 1, 1, 12000);
+INSERT INTO Salesorder_Details VALUES('O46866', 'P07965', 1, 0, 8400);
+INSERT INTO Salesorder_Details VALUES('O46866', 'P07975', 1, 0, 1050);
+INSERT INTO Salesorder_Details VALUES('O19008', 'P00001', 10, 5, 525);
+INSERT INTO Salesorder_Details VALUES('O19008', 'P07975', 5, 3, 1050);
 SELECT * FROM Salesorder_Details;
 
 CREATE TABLE Deposit (
