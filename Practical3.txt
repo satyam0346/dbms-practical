@@ -1,0 +1,33 @@
+DESC Deposit;
+DESC Branch;
+
+DESC Borrow;
+DESC Customers;
+
+SELECT * FROM Deposit; 
+
+SELECT * FROM Borrow;
+
+SELECT * FROM Customers;
+
+SELECT * FROM Branch;
+
+SELECT Act_no, Cname, Amount FROM Deposit;
+
+SELECT * FROM SAILORS;
+
+SELECT Bname, Color FROM Boats;
+
+SELECT Emp_name, City FROM Employee;
+
+SELECT * FROM Client;
+
+SELECT Dscr, Sell_Price FROM Product;
+
+SELECT Sname, Age, rating FROM Sailors;
+
+SELECT * FROM Manager;
+
+SELECT Loanno, Cname, Amount FROM Borrow;
+
+SELECT Sid, Day FROM Reserves;
