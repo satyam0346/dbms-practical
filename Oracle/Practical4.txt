@@ -1,0 +1,31 @@
+SELECT CName FROM Deposit WHERE Amount > 4000;
+
+SELECT Emp_name FROM Work WHERE Salary < 22000;
+
+SELECT Sid, Sname, Rating, Age FROM Sailors WHERE Age >25;
+
+SELECT Bid FROM Reserves WHERE Day = '10/10/1998';
+
+SELECT Bid FROM Reserves WHERE Day = TO_DATE('10-OCT-1998', 'DD-MON-YYYY');
+
+SELECT * FROM Boats WHERE Bname = 'Interlake';
+
+SELECT * FROM Boats WHERE Color = 'Red';
+
+SELECT * FROM Client WHERE City = 'Mumbai';
+
+SELECT Name, Baldue, City FROM Client WHERE Baldue >1500;
+
+SELECT * FROM Product WHERE Sell_Price < 500;
+
+SELECT Dscr FROM Product WHERE Qty < 120 AND Cost_Price > 250;
+
+SELECT Act_no, Cname, Bname, Amount, "Date" FROM Deposit WHERE Amount > 2200;
+
+SELECT Cname FROM Customers WHERE City = 'NAGPUR';
+
+SELECT * FROM Sailors WHERE Rating > 7;
+
+SELECT * FROM Salesorder where TO_CHAR(O_dat, 'MON') = 'JUN';
+
+SELECT * FROM Deposit where TO_CHAR("Date", 'MON') = 'MAR';
