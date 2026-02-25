@@ -1,0 +1,19 @@
+SELECT Cname FROM Customers WHERE Cname LIKE 'M%';
+
+SELECT Cname FROM Customers WHERE Cname LIKE '%L';
+
+SELECT * FROM Borrow WHERE Bname LIKE 'A%';
+
+SELECT Sname FROM Sailors WHERE LENGTH(Sname) >= 6;
+
+SELECT * FROM Employee WHERE Street LIKE 'S%';
+
+SELECT * FROM Boats WHERE Bname LIKE '%e';
+
+SELECT * FROM Client WHERE name LIKE '__h%';
+
+SELECT Name, Baldue, City FROM Client WHERE Pincode LIKE '4%';
+
+SELECT * FROM Customers WHERE City LIKE '_A%';
+
+SELECT Name, City FROM Client WHERE State LIKE '___a%' OR State LIKE '____a%';
