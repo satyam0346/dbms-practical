@@ -1,0 +1,11 @@
+SELECT SUM(Amount) FROM Deposit;
+SELECT MAX(Amount) FROM Borrow;
+SELECT AVG(Age) FROM Sailors;
+SELECT COUNT (*) FROM Customers;
+SELECT COUNT (City) FROM Customers;
+SELECT SUM(Tgt) FROM Salesman;
+UPDATE Work SET Salary = 11500 WHERE Salary = 10000;
+UPDATE Client SET City = 'Bengaluru' WHERE City = 'Bangalore';
+SELECT Emp_name, Salary, Salary +(Salary * 0.15) AS "New Salary" FROM Work;
+SELECT Pr_no, Sell_Price, Sell_Price + (Sell_Price * 0.2) AS "New Sell Price" FROM Product;
+SELECT COUNT(*) FROM Customers WHERE City = 'BOMBAY';
