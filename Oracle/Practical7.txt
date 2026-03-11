@@ -1,0 +1,74 @@
+SELECT W.Salary 
+FROM Employee E
+JOIN Work W ON E.Emp_name = W.Emp_name
+WHERE E.Emp_name = 'Adam';
+
+SELECT C.City FROM Work W JOIN Company C ON W.Cmp_name = C.Cmp_name WHERE W.Emp_name = 'Brooks';
+
+SELECT S.*
+FROM Sailors S JOIN Reserves R
+ON S.Sid = R.Sid
+WHERE R.Day = TO_DATE('09-MAY-1998', 'DD-MON-YYYY');
+
+SELECT S.Sname, R.Day
+FROM Sailors S JOIN Reserves R
+ON S.Sid = R.Sid
+WHERE R.Bid = 103;
+
+SELECT S.Sname, S.Age
+FROM Sailors S
+JOIN Reserves R ON S.Sid = R.Sid
+JOIN Boats B ON R.Bid = B.Bid
+WHERE B.Color = 'Red' AND B.Bid =101;
+
+
+SELECT S.* 
+FROM Sailors S LEFT JOIN Reserves R ON S.Sid = R.Sid
+WHERE R.Sid IS NULL;
+
+
+SELECT DISTINCT  S.Sname
+FROM Sailors S
+JOIN Reserves R ON S.Sid = R.Sid
+JOIN Boats B ON R.Bid = B.Bid
+WHERE B.color IN ('Red', 'Green');
+
+SELECT S.*, B.*
+FROM Sailors S
+JOIN Reserves R ON S.Sid = R.Sid
+JOIN Boats B ON R.Bid = B.Bid
+WHERE B.Bname = 'Interlake';
+
+SELECT S.Rating, B.*
+FROM Sailors S
+JOIN Reserves R ON S.Sid = R.Sid
+JOIN Boats B ON B.Bid = R.Bid
+WHERE R.Day = TO_DATE('10-OCT-1998', 'DD-MON-YY');
+
+SELECT S.Sid, S.Sname
+FROM Sailors S
+JOIN Reserves R ON S.Sid = R.Sid 
+JOIN Boats B ON B.Bid = R.Bid
+WHERE S.Age > 42 OR B.Color = 'Blue';
+
+
+SELECT S.Sname,  S.Rating
+FROM Sailors S 
+JOIN Reserves R ON S.Sid = R.Sid  
+JOIN Boats B ON B.Bid = R.Bid
+WHERE B.Bname = 'Clipper';
+
+SELECT Dscr
+FROM Product WHERE Sell_Price > 500 AND Sell_Price<= 750;
+
+SELECT MAX(Salary) AS Second_Highest_Salary FROM Work WHERE Salary < (SELECT MAX(Salary) FROM Work);
+
+SELECT R.Day, S.Sname
+FROM Sailors S
+JOIN Reserves R ON S.Sid = R.Sid
+WHERE S.Age > 35 AND S.Age < 65;
+
+SELECT E.Emp_name
+FROM Employee E
+JOIN Work W ON E.Emp_name = W.Emp_name
+WHERE W.Cmp_name = 'FBC';
