@@ -48,3 +48,52 @@ JOIN Salesorder_Details SD ON P.Pr_no = SD.Pr_no
 JOIN Salesorder S ON S.Od_no = SD.Od_no
 JOIN Client C ON C.Cl_no = S.Cl_no
 WHERE P.Dscr = 'Trousers';
+
+SELECT * FROM Client WHERE Name LIKE '_a%';
+
+SELECT * FROM Product WHERE Qty < Reorder_Lvl;
+
+SELECT P.Dscr, SUM(SD.Qty_order) AS Total_Qty
+FROM Product P 
+JOIN Salesorder_Details SD ON P.Pr_no = SD.Pr_no
+GROUP BY P.Dscr;
+
+SELECT DISTINCT P.Dscr
+FROM Product P 
+JOIN Salesorder_Details SD ON P.Pr_no = SD.Pr_no
+JOIN Salesorder S ON S.Od_no = SD.Od_no
+JOIN Client C ON C.Cl_no = S.Cl_no
+WHERE C.Name = 'Ivan Bayross';
+
+SELECT DISTINCT C.Name
+FROM Product P 
+JOIN Salesorder_Details SD ON P.Pr_no = SD.Pr_no
+JOIN Salesorder S ON S.Od_no = SD.Od_no
+JOIN Client C ON C.Cl_no = S.Cl_no
+WHERE P.Dscr = 'Trousers';
+
+
+SELECT SD.Pr_no, SD.Qty_order
+FROM Salesorder S
+JOIN Salesorder_Details SD ON S.Od_no = SD.Od_no
+WHERE S.Cl_no IN ('C00001', 'C00002');
+
+
+SELECT C.*
+FROM Client C
+JOIN Salesorder S ON C.Cl_no = S.Cl_no
+WHERE S.Od_no = 'O19001';
+
+
+SELECT C.Name
+FROM Client C
+JOIN Salesorder S ON C.Cl_no = S.Cl_no
+JOIN Salesorder_Details SD ON S.Od_no = SD.Od_no
+GROUP BY C.Name
+HAVING SUM(SD.Qty_order * SD.Rate) >= 10000;
+
+
+
+SELECT Od_no, SUM(Qty_order)
+FROM Salesorder_details
+GROUP BY (Od_no);
