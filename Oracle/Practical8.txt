@@ -1,0 +1,29 @@
+SELECT E.Emp_name, C.City
+FROM Employee E 
+JOIN Work W ON E.Emp_name = W.Emp_name
+JOIN Company C ON W.Cmp_name = C.Cmp_name;
+
+
+SELECT E.Emp_name, W.Cmp_name
+FROM Employee E
+JOIN Work W ON E.Emp_name = W.Emp_name
+WHERE W.Salary > 15000;
+
+
+SELECT AVG(Rating) AS Avg_Rating, AVG(Age) AS Avg_Age
+FROM Sailors;
+
+
+SELECT * FROM Product;
+
+
+SELECT Name FROM Salesman WHERE Amt  > 2850;
+
+
+UPDATE Product SET Cost_Price = 950 WHERE Dscr = 'Trousers';
+
+
+SELECT * FROM Client WHERE Name LIKE '_a%';
+
+
+SELECT * FROM Product WHERE Qty < Reorder_Lvl;
