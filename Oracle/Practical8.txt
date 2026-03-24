@@ -3,51 +3,19 @@ FROM Employee E
 JOIN Work W ON E.Emp_name = W.Emp_name
 JOIN Company C ON W.Cmp_name = C.Cmp_name;
 
-
 SELECT E.Emp_name, W.Cmp_name
 FROM Employee E
 JOIN Work W ON E.Emp_name = W.Emp_name
 WHERE W.Salary > 15000;
 
-
 SELECT AVG(Rating) AS Avg_Rating, AVG(Age) AS Avg_Age
 FROM Sailors;
 
-
 SELECT * FROM Product;
-
 
 SELECT Name FROM Salesman WHERE Amt  > 2850;
 
-
 UPDATE Product SET Cost_Price = 950 WHERE Dscr = 'Trousers';
-
-
-SELECT * FROM Client WHERE Name LIKE '_a%';
-
-
-SELECT * FROM Product WHERE Qty < Reorder_Lvl;
-
-SELECT P.Dscr, SUM(SD.Qty_order) AS Total_Qty
-FROM Product P 
-JOIN Salesorder_Details SD ON P.Pr_no = SD.Pr_no
-GROUP BY P.Dscr;
-
-
-SELECT DISTINCT P.Dscr
-FROM Product P 
-JOIN Salesorder_Details SD ON P.Pr_no = SD.Pr_no
-JOIN Salesorder S ON S.Od_no = SD.Od_no
-JOIN Client C ON C.Cl_no = S.Cl_no
-WHERE C.Name = 'Ivan Bayross';
-
-
-SELECT DISTINCT C.Name
-FROM Product P 
-JOIN Salesorder_Details SD ON P.Pr_no = SD.Pr_no
-JOIN Salesorder S ON S.Od_no = SD.Od_no
-JOIN Client C ON C.Cl_no = S.Cl_no
-WHERE P.Dscr = 'Trousers';
 
 SELECT * FROM Client WHERE Name LIKE '_a%';
 
