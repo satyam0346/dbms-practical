@@ -1,0 +1,51 @@
+db.Sailors.insertMany([
+  { Sid: 22, Sname: 'Dustin', Rating: 7, Age: 45.0 },
+  { Sid: 29, Sname: 'Brutus', Rating: 1, Age: 33.0 },
+  { Sid: 31, Sname: 'Lubber', Rating: 8, Age: 55.5 },
+  { Sid: 32, Sname: 'Andy', Rating: 8, Age: 25.5 },
+  { Sid: 58, Sname: 'Rusty', Rating: 10, Age: 35.0 },
+  { Sid: 64, Sname: 'Horatio', Rating: 7, Age: 35.0 },
+  { Sid: 71, Sname: 'Zobra', Rating: 10, Age: 16.0 },
+  { Sid: 74, Sname: 'Horatio', Rating: 9, Age: 35.0 },
+  { Sid: 85, Sname: 'Art', Rating: 3, Age: 25.5 },
+  { Sid: 95, Sname: 'Bob', Rating: 3, Age: 63.5 }
+]);
+
+
+db.Reserves.insertMany([
+  { Sid: 22, Bid: 101, Day: "10-oct-98"},
+  { Sid: 22, Bid: 102, Day: "10-oct-98" },
+  { Sid: 22, Bid: 103, Day: "10-aug-98"},
+  { Sid: 22, Bid: 104, Day: "10-jul-98"},
+  { Sid: 31, Bid: 102, Day:  "11-oct-98"},
+  { Sid: 31, Bid: 103, Day: "11-jun-98"},
+  { Sid: 31, Bid: 104, Day:  "11-dect-98"},
+  { Sid: 64, Bid: 101, Day: "9-may-98"},
+  { Sid: 64, Bid: 102, Day: "9-aug-98"},
+  { Sid: 74, Bid: 103, Day: "9-aug-98"}
+]);
+
+
+db.Client.insertMany([
+  { Cl_no: "C00001", Name: "Ivan Bayross", City: "Mumbai", Pincode: 400054, State: "Maharashtra", Baldue: 15000 },
+  { Cl_no: "C00002", Name: "Mamta Muzumdar", City: "Madras", Pincode: 780001, State: "Tamil Nadu", Baldue: 1000 },
+  { Cl_no: "C00003", Name: "Chhaya Bankar", City: "Mumbai", Pincode: 400057, State: "Maharashtra", Baldue: 5000 },
+  { Cl_no: "C00004", Name: "Ashwini Joshi", City: "Bangalore", Pincode: 560001, State: "Karnataka", Baldue: 500 },
+  { Cl_no: "C00005", Name: "Hansel Colaco", City: "Mumbai", Pincode: 400060, State: "Maharashtra", Baldue: 2000 },
+  { Cl_no: "C00006", Name: "Deepak Sharma", City: "Mangalore", Pincode: 560050, State: "Karnataka", Baldue: 1000 }
+]);
+
+
+
+db.Product.insertMany([
+  { Pr_no: "P00001", Dscr: "T-Shirts", Profit: 5, Unit: "Piece", Qty: 200, Reorder_Lvl: 50, Sell_Price: 350, Cost_Price: 250 },
+  { Pr_no: "P0345", Dscr: "Shirts", Profit: 6, Unit: "Piece", Qty: 150, Reorder_Lvl: 50, Sell_Price: 500, Cost_Price: 350 },
+  { Pr_no: "P06734", Dscr: "Cotton Jeans", Profit: 5, Unit: "Piece", Qty: 100, Reorder_Lvl: 20, Sell_Price: 600, Cost_Price: 450 },
+  { Pr_no: "P07865", Dscr: "Jeans", Profit: 5, Unit: "Piece", Qty: 100, Reorder_Lvl: 20, Sell_Price: 750, Cost_Price: 500 },
+  { Pr_no: "P07868", Dscr: "Trousers", Profit: 2, Unit: "Piece", Qty: 150, Reorder_Lvl: 50, Sell_Price: 850, Cost_Price: 550 },
+  { Pr_no: "P07885", Dscr: "Pull Overs", Profit: 3, Unit: "Piece", Qty: 80, Reorder_Lvl: 30, Sell_Price: 700, Cost_Price: 450 },
+  { Pr_no: "P07965", Dscr: "Denim Shirts", Profit: 4, Unit: "Piece", Qty: 100, Reorder_Lvl: 40, Sell_Price: 350, Cost_Price: 250 },
+  { Pr_no: "P07975", Dscr: "Lycra Tops", Profit: 5, Unit: "Piece", Qty: 70, Reorder_Lvl: 30, Sell_Price: 300, Cost_Price: 175 },
+  { Pr_no: "P08865", Dscr: "Skirts", Profit: 5, Unit: "Piece", Qty: 75, Reorder_Lvl: 30, Sell_Price: 450, Cost_Price: 300 }
+]);
+
