@@ -1,0 +1,100 @@
+Q1
+SELECT Od_no, AVG(Rate) AS Avg_Rate
+FROM Salesorder_Details
+GROUP BY Od_no;
+
+Q2
+SELECT *
+FROM Borrow;
+
+Q2
+SELECT C.Cname, B.Loanno, B.Amount
+FROM Customers C
+JOIN Borrow B ON C.Cname = B.Cname;
+
+Q3
+SELECT B.Cname
+FROM Borrow B
+JOIN Branch Br ON B.Bname = Br.Bname
+JOIN Customers C ON B.Cname = C.Cname
+WHERE Br.City = C.City;
+
+Q4
+SELECT B.*
+FROM Borrow B
+JOIN Deposit D ON B.Cname = D.Cname
+WHERE D."Date" > TO_DATE('31-AUG-1995','DD-MON-YYYY');
+
+Q5
+SELECT *
+FROM Salesorder
+WHERE Cl_no IN ('C00001','C00002');
+
+Q6
+SELECT *
+FROM Salesorder
+WHERE TO_CHAR(O_dat,'MON') = 'JUN';
+
+Q7
+SELECT *
+FROM Client
+WHERE State != 'Maharashtra';
+
+Q7
+WHERE State <> 'Maharashtra';
+
+Q8
+SELECT MAX(Sell_Price) AS Max_Price,
+       MIN(Sell_Price) AS Min_Price
+FROM Product;
+
+Q9
+SELECT COUNT(*) 
+FROM Product
+WHERE Sell_Price <= 500;
+
+Q10
+SELECT Od_no, O_dat
+FROM Salesorder;
+
+Q11
+SELECT TO_CHAR(D_dat,'MON') AS Month,
+       D_dat
+FROM Salesorder;
+
+Q12
+SELECT SYSDATE + 25 AS Future_Date
+FROM DUAL;
+
+Q13
+SELECT SUM(S.Qty_order * S.Rate) AS Total_Amount
+FROM Salesorder O
+JOIN Salesorder_Details S ON O.Od_no = S.Od_no
+WHERE TO_CHAR(O.O_dat,'MON') = 'JUN'
+AND O.Bill = 'Y';
+
+Q14
+SELECT S.Od_no, P.Dscr, S.Qty_order
+FROM Product P
+JOIN Salesorder_Details S ON P.Pr_no = S.Pr_no
+WHERE P.Dscr = 'Pull Overs'
+AND S.Qty_order < 5;
+
+Q15
+SELECT P.Dscr, O.Od_no
+FROM Client C
+JOIN Salesorder O ON C.Cl_no = O.Cl_no
+JOIN Salesorder_Details S ON O.Od_no = S.Od_no
+JOIN Product P ON S.Pr_no = P.Pr_no
+WHERE C.Name IN ('Ivan Bayross','Mamta Muzumdar');
+
+Q16
+SELECT DISTINCT C.Name
+FROM Client C
+JOIN Salesorder O ON C.Cl_no = O.Cl_no
+WHERE O.O_dat < TO_DATE('01-JUN-2004','DD-MON-YYYY');
+
+Q17
+SELECT *
+FROM Client
+WHERE City IN ('Bengaluru','Mangalore');
